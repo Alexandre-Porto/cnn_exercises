@@ -32,8 +32,8 @@ imagePaths = list(paths.list_images(args["dataset"]))
 
 # initialize the image preprocessor, load the dataset from disk,
 # and reshape the data matrix
-sp = SimplePreprocessor(32, 32)
-sdl = SimpleDatasetLoader(preprocessors=[sp])
+sp = SimplePreprocessor.SimplePreprocessor(32, 32)
+sdl = SimpleDatasetLoader.SimpleDatasetLoader(preprocessors=[sp])
 (data, labels) = sdl.load(imagePaths, verbose=500)
 data = data.reshape((data.shape[0], 3072))
 
