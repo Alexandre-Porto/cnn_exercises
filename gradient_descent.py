@@ -40,8 +40,7 @@ args = vars(ap.parse_args())
 
 # generate a 2-class classification problem with 1,000 data points,
 # where each data point is a 2D feature vector
-(X, y) = make_blobs(n_samples=1000, n_features=2, centers=2,
-cluster_std=1.5, random_state=1)
+(X, y) = make_blobs(n_samples=1000, n_features=2, centers=2,cluster_std=1.5, random_state=1)
 y = y.reshape((y.shape[0], 1))
 
 # insert a column of 1’s as the last entry in the feature
@@ -51,8 +50,7 @@ X = np.c_[X, np.ones((X.shape[0]))]
 
 # partition the data into training and testing splits using 50% of
 # the data for training and the remaining 50% for testing
-(trainX, testX, trainY, testY) = train_test_split(X, y,
-test_size=0.5, random_state=42)
+(trainX, testX, trainY, testY) = train_test_split(X, y,test_size=0.5, random_state=42)
 
 # initialize our weight matrix and list of losses
 print("[INFO] training...")
