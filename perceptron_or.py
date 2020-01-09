@@ -5,7 +5,6 @@ Created on Thu Jan  9 10:50:58 2020
 @author: Porto
 """
 
-
 # import the necessary packages
 from pyimagesearch.nn import Perceptron
 import numpy as np
