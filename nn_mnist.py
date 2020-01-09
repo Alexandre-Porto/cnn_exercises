@@ -28,6 +28,8 @@ data.shape[1]))
 
 print('trainX'+str(trainX))
 print('trainY'+str(trainY))
+print('trainX shape'+str(trainX.shape))
+print('trainY shape'+str(trainY.shape))
 
 # convert the labels from integers to vectors
 trainY = LabelBinarizer().fit_transform(trainY)
