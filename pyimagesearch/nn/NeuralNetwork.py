@@ -28,8 +28,8 @@ class NeuralNetwork:
         w = np.random.randn(layers[-2] + 1, layers[-1])
         self.W.append(w / np.sqrt(layers[-2]))
 
-        print('weights matrix list len: '+str(len(self.W)))
-        print('nn weights: '+str(self.W))
+        #print('weights matrix list len: '+str(len(self.W)))
+        #print('nn weights: '+str(self.W))
 
         #raise ValueError('interrupt')
 
@@ -74,16 +74,16 @@ class NeuralNetwork:
         # feature vector itself
         A = [np.atleast_2d(x)]
 
-        print('A: '+str(A))
+        #print('A: '+str(A))
 
         # FEEDFORWARD:
         # loop over the layers in the network
 
-        print('len(self.W): '+str(len(self.W)))
-        print('self.W: '+str(self.W))
+        #print('len(self.W): '+str(len(self.W)))
+        #print('self.W: '+str(self.W))
         for layer in np.arange(0, len(self.W)):
 
-            print('layer: '+str(layer))
+            #print('layer: '+str(layer))
             # feedforward the activation at the current layer by
             # taking the dot product between the activation and
             # the weight matrix -- this is called the "net input"
@@ -114,7 +114,7 @@ class NeuralNetwork:
         # of our activation function for the output value
         D = [error * self.sigmoid_deriv(A[-1])]
 
-        print('D: '+str(D))
+        #print('D: '+str(D))
         
         # once you understand the chain rule it becomes super easy
         # to implement with a ‘for‘ loop -- simply loop over the
