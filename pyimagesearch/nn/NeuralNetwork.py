@@ -176,6 +176,8 @@ class NeuralNetwork:
 
         print("predictions: "+str(predictions))
         print("targets: "+str(targets))
+        print("predictions shape: "+str(predictions.shape))
+        print("targets shape: "+str(targets.shape))
 
         loss = 0.5 * np.sum((predictions - targets) ** 2)
 
