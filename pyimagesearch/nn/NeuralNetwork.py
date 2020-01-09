@@ -23,10 +23,10 @@ class NeuralNetwork:
             # adding an extra node for the bias
             w = np.random.randn(layers[i] + 1, layers[i + 1] + 1)
             self.W.append(w / np.sqrt(layers[i]))
-            # the last two layers are a special case where the input
-            # connections need a bias term but the output does not
-            w = np.random.randn(layers[-2] + 1, layers[-1])
-            self.W.append(w / np.sqrt(layers[-2]))
+        # the last two layers are a special case where the input
+        # connections need a bias term but the output does not
+        w = np.random.randn(layers[-2] + 1, layers[-1])
+        self.W.append(w / np.sqrt(layers[-2]))
 
     def __repr__(self):
         # construct and return a string that represents the network
