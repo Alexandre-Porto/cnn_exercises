@@ -28,7 +28,7 @@ class NeuralNetwork:
         w = np.random.randn(layers[-2] + 1, layers[-1])
         self.W.append(w / np.sqrt(layers[-2]))
 
-        print('weights matrix shape: '+str(self.W.shape))
+        print('weights matrix list len: '+str(len(self.W)))
         print('nn weights: '+str(self.W))
 
     def __repr__(self):
