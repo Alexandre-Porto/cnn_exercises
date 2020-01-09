@@ -46,3 +46,21 @@ class NeuralNetwork:
         # that ‘x‘ has already been passed through the ‘sigmoid‘
         # function
         return x * (1 - x)
+
+    def fit(self, X, y, epochs=1000, displayUpdate=100):
+        44 # insert a column of 1’s as the last entry in the feature
+        45 # matrix -- this little trick allows us to treat the bias
+        46 # as a trainable parameter within the weight matrix
+        47 X = np.c_[X, np.ones((X.shape[0]))]
+        48
+        49 # loop over the desired number of epochs
+        50 for epoch in np.arange(0, epochs):
+        51 # loop over each individual data point and train
+        52 # our network on it
+        for (x, target) in zip(X, y):
+            self.fit_partial(x, target)
+
+            # check to see if we should display a training update
+            if epoch == 0 or (epoch + 1) % displayUpdate == 0:
+                loss = self.calculate_loss(X, y)
+                print("[INFO] epoch={}, loss={:.7f}".format(epoch + 1, loss))

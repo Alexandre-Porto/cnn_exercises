@@ -31,7 +31,7 @@ class NeuralNetwork:
         print('weights matrix list len: '+str(len(self.W)))
         print('nn weights: '+str(self.W))
 
-        raise ValueError('interrupt')
+        #raise ValueError('interrupt')
 
     def __repr__(self):
         # construct and return a string that represents the network
@@ -62,11 +62,11 @@ class NeuralNetwork:
             for (x, target) in zip(X, y):
                 self.fit_partial(x, target)
             
-                # check to see if we should display a training update
-                if epoch == 0 or (epoch + 1) % displayUpdate == 0:
-                    loss = self.calculate_loss(X, y)
-                    print("[INFO] epoch={}, loss={:.7f}".format(
-                    epoch + 1, loss))
+            # check to see if we should display a training update
+            if epoch == 0 or (epoch + 1) % displayUpdate == 0:
+                loss = self.calculate_loss(X, y)
+                print("[INFO] epoch={}, loss={:.7f}".format(
+                epoch + 1, loss))
 
     def fit_partial(self, x, y):
         # construct our list of output activations for each layer
