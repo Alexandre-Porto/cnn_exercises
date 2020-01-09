@@ -78,7 +78,12 @@ class NeuralNetwork:
 
         # FEEDFORWARD:
         # loop over the layers in the network
+
+        print('len(self.W): '+str(len(self.W)))
+        print('self.W: '+str(self.W))
         for layer in np.arange(0, len(self.W)):
+
+            print('layer: '+str(layer))
             # feedforward the activation at the current layer by
             # taking the dot product between the activation and
             # the weight matrix -- this is called the "net input"
