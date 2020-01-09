@@ -74,6 +74,8 @@ class NeuralNetwork:
         # feature vector itself
         A = [np.atleast_2d(x)]
 
+        print('A: '+str(A))
+
         # FEEDFORWARD:
         # loop over the layers in the network
         for layer in np.arange(0, len(self.W)):
