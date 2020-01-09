@@ -155,7 +155,6 @@ class NeuralNetwork:
             # insert a column of 1’s as the last entry in the feature
             # matrix (bias)
             p = np.c_[p, np.ones((p.shape[0]))]
-
         # loop over our layers in the network
         for layer in np.arange(0, len(self.W)):
             # computing the output prediction is as simple as taking
@@ -171,8 +170,13 @@ class NeuralNetwork:
     def calculate_loss(self, X, targets):
         # make predictions for the input data points then compute
         # the loss
+
         targets = np.atleast_2d(targets)
         predictions = self.predict(X, addBias=False)
+
+        print("predictions: "+str(predictions))
+        print("targets: "+str(targets))
+
         loss = 0.5 * np.sum((predictions - targets) ** 2)
 
         # return the loss
