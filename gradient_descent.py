@@ -99,6 +99,8 @@ plt.figure()
 print('2 first')
 
 plt.title("Data")
+
+print('before half')
 plt.scatter(testX[:, 0], testX[:, 1], marker="o", c=testY, s=30)
 
 print('half')
