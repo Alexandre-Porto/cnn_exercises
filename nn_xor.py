@@ -15,7 +15,7 @@ X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
 y = np.array([[0], [1], [1], [0]])
 
 # define our 2-2-1 neural network and train it
-nn = NeuralNetwork.NeuralNetwork([2, 2, 1], alpha=0.02)
+nn = NeuralNetwork.NeuralNetwork([2, 2, 1], alpha=0.0002)
 nn.fit(X, y, epochs=200000)
 
 # now that our network is trained, loop over the XOR data points
