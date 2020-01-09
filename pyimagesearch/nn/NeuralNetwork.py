@@ -31,6 +31,8 @@ class NeuralNetwork:
         print('weights matrix list len: '+str(len(self.W)))
         print('nn weights: '+str(self.W))
 
+        raise ValueError('interrupt')
+
     def __repr__(self):
         # construct and return a string that represents the network
         # architecture
