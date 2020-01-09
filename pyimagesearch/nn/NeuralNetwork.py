@@ -65,8 +65,7 @@ class NeuralNetwork:
             # check to see if we should display a training update
             if epoch == 0 or (epoch + 1) % displayUpdate == 0:
                 loss = self.calculate_loss(X, y)
-                print("[INFO] epoch={}, loss={:.7f}".format(
-                epoch + 1, loss))
+                print("[INFO] epoch={}, loss={:.7f}".format(epoch + 1, loss))
 
     def fit_partial(self, x, y):
         # construct our list of output activations for each layer
@@ -119,7 +118,7 @@ class NeuralNetwork:
             delta = D[-1].dot(self.W[layer].T)
             delta = delta * self.sigmoid_deriv(A[layer])
             D.append(delta)
-    
+
         # since we looped over our layers in reverse order we need to
         # reverse the deltas
         D = D[::-1]
