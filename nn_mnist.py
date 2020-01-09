@@ -26,6 +26,9 @@ data.shape[1]))
 # construct the training and testing splits
 (trainX, testX, trainY, testY) = train_test_split(data,digits.target, test_size=0.25)
 
+print('trainX'+str(trainX))
+print('trainY'+str(trainY))
+
 # convert the labels from integers to vectors
 trainY = LabelBinarizer().fit_transform(trainY)
 testY = LabelBinarizer().fit_transform(testY)
