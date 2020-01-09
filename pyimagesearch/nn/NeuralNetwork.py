@@ -106,7 +106,7 @@ class NeuralNetwork:
         
         error = A[-1] - y
 
-        print('error: '+str(error))
+        #print('error: '+str(error))
         
         # from here, we need to apply the chain rule and build our
         # list of deltas ‘D‘; the first entry in the deltas is
