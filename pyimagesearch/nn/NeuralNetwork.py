@@ -105,12 +105,16 @@ class NeuralNetwork:
         # value
         
         error = A[-1] - y
+
+        print('error: '+str(error))
         
         # from here, we need to apply the chain rule and build our
         # list of deltas ‘D‘; the first entry in the deltas is
         # simply the error of the output layer times the derivative
         # of our activation function for the output value
         D = [error * self.sigmoid_deriv(A[-1])]
+
+        print('D: '+str(D))
         
         # once you understand the chain rule it becomes super easy
         # to implement with a ‘for‘ loop -- simply loop over the
