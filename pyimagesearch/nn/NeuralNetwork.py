@@ -27,6 +27,8 @@ class NeuralNetwork:
         # connections need a bias term but the output does not
         w = np.random.randn(layers[-2] + 1, layers[-1])
         self.W.append(w / np.sqrt(layers[-2]))
+        
+        print('self.W shape after creation: '+str(self.W))
 
         #print('weights matrix list len: '+str(len(self.W)))
         #print('nn weights: '+str(self.W))
