@@ -181,8 +181,9 @@ class NeuralNetwork:
             print('self.W[layer].shape: '+str(self.W[layer].shape))
             print('self.W[layer].shape: '+str(self.W[layer].shape))
             print('self.W[layer]: '+str(self.W[layer]))
-            
-            
+
+
+
             p = self.sigmoid(np.dot(p, self.W[layer]))
             
             print('p shape after pred: '+str(p.shape))
