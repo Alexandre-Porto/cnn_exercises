@@ -52,6 +52,7 @@ class NeuralNetwork:
     def fit(self, X, y, epochs=1000, displayUpdate=100):
         
         print('X begining fit: '+str(X))
+        print('X beginning shape: '+str(X.shape))
         
         # insert a column of 1’s as the last entry in the feature
         # matrix -- this little trick allows us to treat the bias
