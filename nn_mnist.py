@@ -30,9 +30,14 @@ print('trainY'+str(trainY))
 print('trainX shape'+str(trainX.shape))
 print('trainY shape'+str(trainY.shape))
 
+print('trainY before shape: '+str(trainY.shape))
+
+
 # convert the labels from integers to vectors
 trainY = LabelBinarizer().fit_transform(trainY)
 testY = LabelBinarizer().fit_transform(testY)
+
+print('trainY after shape: '+str(trainY.shape))
 
 # train the network
 print("[INFO] training network...")
