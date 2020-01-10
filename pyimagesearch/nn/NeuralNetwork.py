@@ -170,7 +170,10 @@ class NeuralNetwork:
     def calculate_loss(self, X, targets):
         # make predictions for the input data points then compute
         # the loss
-
+        
+        print('X: '+str(X))
+        print('X.shape: '+str(X.shape))
+ 
         targets = np.atleast_2d(targets)
         predictions = self.predict(X, addBias=False)
 

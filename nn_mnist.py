@@ -5,7 +5,6 @@ Created on Thu Jan  9 19:15:33 2020
 @author: Porto
 """
 
-
 # import the necessary packages
 from pyimagesearch.nn import NeuralNetwork
 from sklearn.preprocessing import LabelBinarizer
