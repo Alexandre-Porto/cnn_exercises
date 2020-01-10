@@ -58,6 +58,8 @@ class NeuralNetwork:
         # matrix -- this little trick allows us to treat the bias
         # as a trainable parameter within the weight matrix
         X = np.c_[X, np.ones((X.shape[0]))]
+        
+        print('X next shape: '+str(X.shape))
     
         # loop over the desired number of epochs
         for epoch in np.arange(0, epochs):
