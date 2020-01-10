@@ -174,7 +174,13 @@ class NeuralNetwork:
             # and the weight matrix associated with the current layer,
             # then passing this value through a nonlinear activation
             # function
+            
+            print('p shape before pred: '+str(p.shape))
+            print('self.W.shape before pred: '+str(self.W.shape))
+            
             p = self.sigmoid(np.dot(p, self.W[layer]))
+            
+            print('p shape after pred: '+str(p.shape))
     
             # return the predicted value
             return p
