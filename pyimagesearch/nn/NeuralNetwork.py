@@ -66,6 +66,9 @@ class NeuralNetwork:
             # loop over each individual data point and train
             # our network on it
             for (x, target) in zip(X, y):
+                print('y shape: '+str(y.shape))
+                print('target shape: '+str(target.shape))
+                
                 self.fit_partial(x, target)
             
             # check to see if we should display a training update
@@ -74,6 +77,9 @@ class NeuralNetwork:
                 print("[INFO] epoch={}, loss={:.7f}".format(epoch + 1, loss))
 
     def fit_partial(self, x, y):
+        
+        print('X fit partial shape: '+str(x.shape))
+        
         # construct our list of output activations for each layer
         # as our data point flows through the network; the first
         # activation is a special case -- it’s just the input
