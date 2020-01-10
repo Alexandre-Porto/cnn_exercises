@@ -176,7 +176,7 @@ class NeuralNetwork:
             # function
             
             print('p shape before pred: '+str(p.shape))
-            print('self.W.shape before pred: '+str(self.W.shape))
+            print('len(self.W) before pred: '+str(len(self.W)))
             
             p = self.sigmoid(np.dot(p, self.W[layer]))
             
