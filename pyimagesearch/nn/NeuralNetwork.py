@@ -26,7 +26,7 @@ class NeuralNetwork:
             print('i: '+str(i))
             print('layers[i] + 1: '+str(layers[i]+1))
             print('layers[i+1] + 1: '+str(layers[i+1]+1))
-            print('w shape: '+str(w.shape))
+            print('len(w): '+str(len(w)))
             
             self.W.append(w / np.sqrt(layers[i]))
         # the last two layers are a special case where the input
