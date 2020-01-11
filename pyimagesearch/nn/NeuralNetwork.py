@@ -35,6 +35,8 @@ class NeuralNetwork:
             print('lens of w: '+str(w_lens))
             print('w[0][0]: '+str(w[0][0]))
             
+            print('layers[i]: '+str(layers[i]))
+            
             self.W.append(w / np.sqrt(layers[i]))
 
         # the last two layers are a special case where the input
