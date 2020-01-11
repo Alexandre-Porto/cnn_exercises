@@ -28,6 +28,12 @@ class NeuralNetwork:
             print('layers[i+1] + 1: '+str(layers[i+1]+1))
             print('len(w): '+str(len(w)))
             
+            w_lens = []
+            for i in w:
+                w_lens.append(len(i))
+            
+            print('lens of w: '+str(w_lens))
+            
             self.W.append(w / np.sqrt(layers[i]))
         # the last two layers are a special case where the input
         # connections need a bias term but the output does not
