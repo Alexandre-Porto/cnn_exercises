@@ -22,6 +22,12 @@ class NeuralNetwork:
             # number of nodes in each respective layer together,
             # adding an extra node for the bias
             w = np.random.randn(layers[i] + 1, layers[i + 1] + 1)
+            
+            print('i: '+str(i))
+            print('layers[i] + 1: '+str(layers[i]+1))
+            print('layers[i+1] + 1: '+str(layers[i+1]+1))
+            print('w: '+str(w))
+            
             self.W.append(w / np.sqrt(layers[i]))
         # the last two layers are a special case where the input
         # connections need a bias term but the output does not
