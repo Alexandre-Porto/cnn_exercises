@@ -200,7 +200,7 @@ class NeuralNetwork:
             print('p shape before pred: '+str(p.shape))
             print('len(self.W) before pred: '+str(len(self.W)))
             print('layer: '+str(layer))
-            print('self.W.shape: '+str(self.W.shape))
+            print('self.W len: '+str(len(self.W)))
             print('self.W[layer].shape: '+str(self.W[layer].shape))
             print('self.W[layer]: '+str(self.W[layer]))
 
