@@ -29,8 +29,8 @@ class NeuralNetwork:
             print('len(w): '+str(len(w)))
             
             w_lens = []
-            for i in w:
-                w_lens.append(len(i))
+            for w_i in w:
+                w_lens.append(len(w_i))
             
             print('lens of w: '+str(w_lens))
             print('w[0][0]: '+str(w[0][0]))
