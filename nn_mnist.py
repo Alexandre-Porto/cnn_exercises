@@ -40,6 +40,8 @@ testY = LabelBinarizer().fit_transform(testY)
 print('trainY after shape: '+str(trainY.shape))
 
 # train the network
+print('whats fed into nn: '+str([trainX.shape[1], 32, 16, 10]))
+
 print("[INFO] training network...")
 nn = NeuralNetwork.NeuralNetwork([trainX.shape[1], 32, 16, 10])
 print("[INFO] {}".format(nn))
