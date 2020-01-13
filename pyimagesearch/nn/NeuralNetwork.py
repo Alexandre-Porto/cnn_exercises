@@ -211,8 +211,8 @@ class NeuralNetwork:
             
             print('p shape after pred: '+str(p.shape))
     
-            # return the predicted value
-            return p
+        # return the predicted value
+        return p
 
     def calculate_loss(self, X, targets):
         # make predictions for the input data points then compute
