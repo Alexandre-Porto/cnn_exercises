@@ -49,6 +49,7 @@ class NeuralNetwork:
         
         print('len(self.W) after creation: '+str(len(self.W)))
         print('self.W[0].shape after creation: '+str(self.W[0].shape))
+        print('self.W[-1].shape after creation: '+str(self.W[-1].shape))
 
         #print('weights matrix list len: '+str(len(self.W)))
         #print('nn weights: '+str(self.W))
@@ -232,3 +233,5 @@ class NeuralNetwork:
 
         # return the loss
         return loss
+
+
