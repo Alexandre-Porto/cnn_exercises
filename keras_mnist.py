@@ -19,14 +19,13 @@ import argparse
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser() 
-ap.add_argument("-o", "--output", required=True, 
-help="path to the output loss/accuracy plot") 
+ap.add_argument("-o", "--output", required=True, help="path to the output loss/accuracy plot") 
 args = vars(ap.parse_args())
 # grab the MNIST dataset (if this is your first time running this 
 # script, the download may take a minute -- the 55MB MNIST dataset 
 # will be downloaded) 
 print("[INFO] loading MNIST (full) dataset...") 
-dataset = datasets.fetch_mldata("MNIST Original") 
+dataset = datasets.fetch_mldata("MNIST original', data_home=custom_data_home)
 
 # scale the raw pixel intensities to the range [0, 1.0], then 
 # construct the training and testing splits 
