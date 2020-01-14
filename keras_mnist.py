@@ -34,8 +34,7 @@ print("[INFO] loading MNIST (sample) dataset...")
 digits = datasets.load_digits()
 data = digits.data.astype("float")
 data = (data - data.min()) / (data.max() - data.min())
-print("[INFO] samples: {}, dim: {}".format(data.shape[0],
-data.shape[1]))
+print("[INFO] samples: {}, dim: {}".format(data.shape[0],data.shape[1]))
 
 # construct the training and testing splits
 (trainX, testX, trainY, testY) = train_test_split(data,digits.target, test_size=0.25)
