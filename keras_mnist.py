@@ -24,8 +24,7 @@ args = vars(ap.parse_args())
 # grab the MNIST dataset (if this is your first time running this 
 # script, the download may take a minute -- the 55MB MNIST dataset 
 # will be downloaded) 
-print("[INFO] loading MNIST (full) dataset...") 
-dataset = datasets.fetch_mldata("MNIST original", data_home=None)
+
 
 # load the MNIST dataset and apply min/max scaling to scale the
 # pixel intensity values to the range [0, 1] (each image is
@@ -34,7 +33,8 @@ print("[INFO] loading MNIST (sample) dataset...")
 digits = datasets.load_digits()
 data = digits.data.astype("float")
 data = (data - data.min()) / (data.max() - data.min())
-print("[INFO] samples: {}, dim: {}".format(data.shape[0],data.shape[1]))
+print("[INFO] samples: {}, dim: {}".format(data.shape[0],
+data.shape[1]))
 
 # construct the training and testing splits
 (trainX, testX, trainY, testY) = train_test_split(data,digits.target, test_size=0.25)
