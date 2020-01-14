@@ -39,6 +39,7 @@ class SimpleDatasetLoader:
                 # loop over the preprocessors and apply each to
                 # the image
                 for p in self.preprocessors:
+                    print('p: '+str(p))
                     image = p.preprocess(image)
         
             # treat our processed image as a "feature vector"
