@@ -60,6 +60,10 @@ print('testX: '+str(testX))
 print('trainY: '+str(trainY))
 print('testY: '+str(testY))
 
+print('trainX shape: '+str(trainX.shape))
+print('testX shape: '+str(testX.shape))
+print('trainY shape: '+str(trainY.shape))
+print('testY shape: '+str(testY.shape))
 
 H = model.fit(trainX, trainY, validation_data=(testX, testY), epochs=100, batch_size=128)
 
