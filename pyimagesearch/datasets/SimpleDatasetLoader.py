@@ -38,6 +38,7 @@ class SimpleDatasetLoader:
             if self.preprocessors is not None:
                 # loop over the preprocessors and apply each to
                 # the image
+                print('self.preprocessors: '+str(self.preprocessors))
                 for p in self.preprocessors:
                     print('p: '+str(p))
                     image = p.preprocess(image)
