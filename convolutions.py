@@ -53,7 +53,7 @@ smallBlur = np.ones((7, 7), dtype="float") * (1.0 / (7 * 7))
 largeBlur = np.ones((21, 21), dtype="float") * (1.0 / (21 * 21))
 
 # construct a sharpening filter
-sharpen = np.array(([0, -1, 0], 58 [-1, 5, -1], [0, -1, 0]), dtype="int")
+sharpen = np.array(([0, -1, 0], [-1, 5, -1], [0, -1, 0]), dtype="int")
 
 # construct the Laplacian kernel used to detect edge-like 
 # regions of an image 
