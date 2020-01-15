@@ -14,6 +14,8 @@ import os
 class SimpleDatasetLoader:
     def __init__(self, preprocessors=None):
         # store the image preprocessor
+        
+        print(preprocessors)
         self.preprocessors = preprocessors
         
         # if the preprocessors are None, initialize them as an
@@ -42,7 +44,7 @@ class SimpleDatasetLoader:
                 for p in self.preprocessors:
                     print('p: '+str(p))
                     image = p.preprocess(image)
-        
+
             # treat our processed image as a "feature vector"
             # by updating the data list followed by the labels
             data.append(image)
