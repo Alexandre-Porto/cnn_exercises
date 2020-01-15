@@ -49,6 +49,8 @@ for i in trainY:
 trainY = LabelBinarizer().fit_transform(trainY)
 testY = LabelBinarizer().fit_transform(testY)
 
+for i in trainY:
+    print('trainY: '+str(i))
 # initialize the optimizer and model 
 print("[INFO] compiling model...") 
 opt = SGD(lr=0.005) 
