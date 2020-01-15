@@ -42,8 +42,7 @@ data = data.astype("float") / 255.0
 # the data for training and the remaining 25% for testing 
 (trainX, testX, trainY, testY) = train_test_split(data, labels, test_size=0.25, random_state=42) 
 
-for i in trainY:
-    print('trainY: '+str(i))
+print('unknown label: '+str(trainY[664]))
 
 # convert the labels from integers to vectors
 trainY = LabelBinarizer().fit_transform(trainY)
