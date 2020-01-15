@@ -51,7 +51,12 @@ testY = LabelBinarizer().fit_transform(testY)
 
 for i in range(len(trainY)):
     print('trainY: '+str(trainY[i]))
-    if i[2] == 1:
+    if trainY[i][2] == 1:
+        print('index: '+str(i))
+        raise ValueError('unknown label')
+        
+trainY = np.delete(trainY, 2, 1)
+        
         
 # initialize the optimizer and model 
 print("[INFO] compiling model...") 
