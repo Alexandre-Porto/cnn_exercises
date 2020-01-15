@@ -44,6 +44,8 @@ data = data.astype("float") / 255.0
 
 print('unknown label: '+str(trainY[664]))
 
+raise ValueError('label')
+
 # convert the labels from integers to vectors
 trainY = LabelBinarizer().fit_transform(trainY)
 testY = LabelBinarizer().fit_transform(testY)
