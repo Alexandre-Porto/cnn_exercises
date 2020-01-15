@@ -15,7 +15,7 @@ class SimpleDatasetLoader:
     def __init__(self, preprocessors=None):
         # store the image preprocessor
         
-        print('preprocessors: '+str(preprocessors))
+        #print('preprocessors: '+str(preprocessors))
         self.preprocessors = preprocessors
         
         # if the preprocessors are None, initialize them as an
@@ -40,9 +40,9 @@ class SimpleDatasetLoader:
             if self.preprocessors is not None:
                 # loop over the preprocessors and apply each to
                 # the image
-                print('self.preprocessors: '+str(self.preprocessors))
+                #print('self.preprocessors: '+str(self.preprocessors))
                 for p in self.preprocessors:
-                    print('p: '+str(p))
+                    #print('p: '+str(p))
                     image = p.preprocess(image)
 
             # treat our processed image as a "feature vector"
