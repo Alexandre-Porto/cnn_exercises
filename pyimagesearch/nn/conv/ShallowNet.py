@@ -5,7 +5,6 @@ Created on Tue Jan 14 15:00:15 2020
 @author: Administrador
 """
 
-
  # import the necessary packages
 from keras.models import Sequential 
 from keras.layers.convolutional import Conv2D
