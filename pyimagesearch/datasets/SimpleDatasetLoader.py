@@ -15,7 +15,7 @@ class SimpleDatasetLoader:
     def __init__(self, preprocessors=None):
         # store the image preprocessor
         
-        print('preprocessors: 'str(preprocessors))
+        print('preprocessors: '+str(preprocessors))
         self.preprocessors = preprocessors
         
         # if the preprocessors are None, initialize them as an
