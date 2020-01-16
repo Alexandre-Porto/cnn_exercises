@@ -30,7 +30,7 @@ labelNames = ["airplane", "automobile", "bird", "cat", "deer", "dog", "frog", "h
 # initialize the optimizer and model
 print("[INFO] compiling model...")
 opt = SGD(lr=0.01)
-model = ShallowNet.build(width=32, height=32, depth=3, classes=10)
+model = ShallowNet.ShallowNet.build(width=32, height=32, depth=3, classes=10)
 model.compile(loss="categorical_crossentropy", optimizer=opt,
               metrics=["accuracy"]) 
 # train the network 34 print("[INFO] training network...")
