@@ -62,6 +62,7 @@ trainY = np.delete(trainY, 2, 1)
         
 print('trainY shape after: '+str(trainY.shape))
 
+testY = np.delete(testY, 2, 1)
         
 # initialize the optimizer and model 
 print("[INFO] compiling model...") 
