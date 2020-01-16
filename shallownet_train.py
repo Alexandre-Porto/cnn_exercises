@@ -32,11 +32,11 @@ args = vars(ap.parse_args())
 print("[INFO] loading images...") 
 imagePaths = list(paths.list_images(args["dataset"])) 
 # initialize the image preprocessors 
-sp = SimplePreprocessor(32, 32) 
+sp = SimplePreprocessor.SimpleProcessor(32, 32) 
 iap = ImageToArrayPreprocessor() 
 # load the dataset from disk then scale the raw pixel intensities 
 # to the range [0, 1] 
-sdl = SimpleDatasetLoader(preprocessors=[sp, iap]) 
+sdl = SimpleDatasetLoader.SimpleDatasetLoader(preprocessors=[sp, iap]) 
 (data, labels) = sdl.load(imagePaths, verbose=500) 
 data = data.astype("float") / 255.0
 
