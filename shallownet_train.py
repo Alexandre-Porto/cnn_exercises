@@ -33,7 +33,7 @@ print("[INFO] loading images...")
 imagePaths = list(paths.list_images(args["dataset"])) 
 # initialize the image preprocessors 
 sp = SimplePreprocessor.SimplePreprocessor(32, 32) 
-iap = ImageToArrayPreprocessor() 
+iap = ImageToArrayPreprocessor.ImageToArrayPreprocessor() 
 # load the dataset from disk then scale the raw pixel intensities 
 # to the range [0, 1] 
 sdl = SimpleDatasetLoader.SimpleDatasetLoader(preprocessors=[sp, iap]) 
