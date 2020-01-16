@@ -49,6 +49,20 @@ data = data.astype("float") / 255.0
 trainY = LabelBinarizer().fit_transform(trainY) 
 testY = LabelBinarizer().fit_transform(testY)
 
+for i in range(len(trainY)):
+    print('trainY: '+str(trainY[i]))
+    if trainY[i][2] == 1:
+        print('index: '+str(i))
+        #raise ValueError('unknown label')
+        
+print('trainY shape before: '+str(trainY.shape))
+        
+trainY = np.delete(trainY, 2, 1)
+        
+print('trainY shape after: '+str(trainY.shape))
+
+testY = np.delete(testY, 2, 1)
+
 # initialize the optimizer and model 
 print("[INFO] compiling model...") 
 opt = SGD(lr=0.005) 
