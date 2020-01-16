@@ -28,7 +28,20 @@ ap.add_argument("-m", "--model", required=True,
                 help="path to output model") 
 args = vars(ap.parse_args())
 
- # partition the data into training and testing splits using 75% of 
+# grab the list of images that we’ll be describing 
+print("[INFO] loading images...") 
+imagePaths = list(paths.list_images(args["dataset"])) 
+# initialize the image preprocessors 
+sp = SimplePreprocessor(32, 32) 
+iap = ImageToArrayPreprocessor() 
+# load the dataset from disk then scale the raw pixel intensities 
+# to the range [0, 1] 
+sdl = SimpleDatasetLoader(preprocessors=[sp, iap]) 
+(data, labels) = sdl.load(imagePaths, verbose=500) 
+data = data.astype("float") / 255.0
+
+
+# partition the data into training and testing splits using 75% of 
 # the data for training and the remaining 25% for testing 
 (trainX, testX, trainY, testY) = train_test_split(data, labels, test_size=0.25, random_state=42)
 # convert the labels from integers to vectors
