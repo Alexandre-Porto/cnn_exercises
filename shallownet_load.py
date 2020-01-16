@@ -33,11 +33,11 @@ idxs = np.random.randint(0, len(imagePaths), size=(10,))
 imagePaths = imagePaths[idxs]
 
 # initialize the image preprocessors 
-sp = SimplePreprocessor(32, 32) 
-iap = ImageToArrayPreprocessor()
+sp = SimplePreprocessor.SimplePreprocessor(32, 32) 
+iap = ImageToArrayPreprocessor.ImageToArrayPreprocessor()
 # load the dataset from disk then scale the raw pixel intensities 
 # to the range [0, 1] 
-sdl = SimpleDatasetLoader(preprocessors=[sp, iap]) 
+sdl = SimpleDatasetLoader.SimpleDatasetLoader(preprocessors=[sp, iap]) 
 (data, labels) = sdl.load(imagePaths) 
 data = data.astype("float") / 255.0
 
