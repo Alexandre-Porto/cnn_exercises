@@ -52,7 +52,8 @@ preds = model.predict(data, batch_size=32).argmax(axis=1)
 # loop over the sample images
 for (i, imagePath) in enumerate(imagePaths): 
     # load the example image, draw the prediction, and display it 
-    # to our screen 51 image = cv2.imread(imagePath) 
+    # to our screen 
+    image = cv2.imread(imagePath) 
     cv2.putText(image, "Label: {}".format(classLabels[preds[i]]), (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2) 
     cv2.imshow("Image", image) 
     cv2.waitKey(0)
