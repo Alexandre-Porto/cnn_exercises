@@ -32,7 +32,7 @@ args = vars(ap.parse_args())
 print("[INFO] loading images...") 
 imagePaths = list(paths.list_images(args["dataset"])) 
 # initialize the image preprocessors 
-sp = SimplePreprocessor.SimpleProcessor(32, 32) 
+sp = SimplePreprocessor.SimplePreprocessor(32, 32) 
 iap = ImageToArrayPreprocessor() 
 # load the dataset from disk then scale the raw pixel intensities 
 # to the range [0, 1] 
