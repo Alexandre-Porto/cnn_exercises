@@ -56,8 +56,12 @@ for i in range(len(trainY)):
         print('index: '+str(i))
         #raise ValueError('unknown label')
         
+print('trainY shape before: '+str(trainY.shape))
+        
 trainY = np.delete(trainY, 2, 1)
         
+print('trainY shape after: '+str(trainY.shape))
+
         
 # initialize the optimizer and model 
 print("[INFO] compiling model...") 
