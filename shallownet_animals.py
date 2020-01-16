@@ -54,7 +54,7 @@ for i in range(len(trainY)):
     print('trainY: '+str(trainY[i]))
     if trainY[i][2] == 1:
         print('index: '+str(i))
-        raise ValueError('unknown label')
+        #raise ValueError('unknown label')
         
 trainY = np.delete(trainY, 2, 1)
         
