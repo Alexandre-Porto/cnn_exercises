@@ -40,13 +40,13 @@ labelNames = ["airplane", "automobile", "bird", "cat", "deer", "dog", "frog", "h
 # initialize the SGD optimizer, but without any learning rate decay
 print("[INFO] compiling model...") 
 opt = SGD(lr=0.01, momentum=0.9, nesterov=True) 
-model = MiniVGGNet.build(width=32, height=32, depth=3, classes=10) 
+model = MiniVGGNet.MiniVGGNet.build(width=32, height=32, depth=3, classes=10) 
 model.compile(loss="categorical_crossentropy", optimizer=opt, metrics=["accuracy"])
 
 # construct the set of callbacks 
 figPath = os.path.sep.join([args["output"], "{}.png".format( os.getpid())])
 
 jsonPath = os.path.sep.join([args["output"], "{}.json".format( os.getpid())]) 
-callbacks = [TrainingMonitor(figPath, jsonPath=jsonPath)] 
+callbacks = [TrainingMonitor.TrainingMonitor(figPath, jsonPath=jsonPath)] 
 # train the network 54 print("[INFO] training network...") 
 model.fit(trainX, trainY, validation_data=(testX, testY), batch_size=64, epochs=100, callbacks=callbacks, verbose=1)
