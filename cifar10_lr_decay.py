@@ -53,7 +53,7 @@ labelNames = ["airplane", "automobile", "bird", "cat", "deer",
 callbacks = [LearningRateScheduler(step_decay)] 
 # initialize the optimizer and model 
 opt = SGD(lr=0.01, momentum=0.9, nesterov=True) 
-model = MiniVGGNet.build(width=32, height=32, depth=3, classes=10) 
+model = MiniVGGNet.MiniVGGNet.build(width=32, height=32, depth=3, classes=10) 
 model.compile(loss="categorical_crossentropy", optimizer=opt, metrics=["accuracy"]) 
 H = model.fit(trainX, trainY, validation_data=(testX, testY), 
               batch_size=64, epochs=40, callbacks=callbacks, verbose=1)
