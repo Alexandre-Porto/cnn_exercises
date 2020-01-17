@@ -76,4 +76,4 @@ plt.xlabel("Epoch #")
 plt.ylabel("Loss/Accuracy") 
 plt.legend() 
 plt.savefig(args["output"])
-
+plt.show()
