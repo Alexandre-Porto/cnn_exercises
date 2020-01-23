@@ -7,7 +7,7 @@ Created on Fri Jan 17 16:20:39 2020
 
 # import the necessary packages
 from sklearn.preprocessing import LabelBinarizer 
-from .pyimagesearch.nn.conv import MiniVGGNet 
+from pyimagesearch.nn.conv import MiniVGGNet 
 from keras.callbacks import ModelCheckpoint 
 from keras.optimizers import SGD 
 from keras.datasets import cifar10 
