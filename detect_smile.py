@@ -27,8 +27,8 @@ model = load_model(args["model"])
 # if a video path was not supplied, grab the reference to the webcam 
 if not args.get("video", False): 
     camera = cv2.VideoCapture(0) 
-    # otherwise, load the video 
-else: 
+# otherwise, load the video 
+else:
     camera = cv2.VideoCapture(args["video"])
         
 # keep looping 
