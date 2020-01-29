@@ -83,8 +83,8 @@ class_weight=classWeight, batch_size=64, epochs=15, verbose=1)
 # evaluate the network
 print("[INFO] evaluating network...")
 predictions = model.predict(testX, batch_size=64)
-print(classification_report(testY.argmax(axis=1),
-predictions.argmax(axis=1), target_names=le.classes_))
+#print(classification_report(testY.argmax(axis=1),
+#predictions.argmax(axis=1), target_names=le.classes_))
 
 # save the model to disk
 print("[INFO] serializing network...")
