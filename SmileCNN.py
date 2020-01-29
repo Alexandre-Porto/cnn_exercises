@@ -1,3 +1,4 @@
+ubuntu-pt.hopto.org:50050
 # -*- coding: utf-8 -*-
 """
 Created on Wed Jan  8 00:58:33 2020
@@ -59,6 +60,9 @@ labels = np_utils.to_categorical(le.transform(labels), 2)
 # account for skew in the labeled data
 classTotals = labels.sum(axis=0)
 classWeight = classTotals.max() / classTotals
+
+print('data shape: '+str(data.shape))
+print('labels shape: '+str(labels.shape))
 
 # partition the data into training and testing splits using 80% of
 # the data for training and the remaining 20% for testing
