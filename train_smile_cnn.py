@@ -56,6 +56,9 @@ for imagePath in sorted(list(paths.list_images(args["dataset"]))):
     
     #print('data: '+str(data))
     
+    print('data shape: '+str(data.shape))
+    print('labels shape: '+str(labels.shape))
+    
     # partition the data into training and testing splits using 80% of 
     # the data for training and the remaining 20% for testing 
     (trainX, testX, trainY, testY) = train_test_split(data, labels, test_size=0.20, stratify=labels, random_state=42)
