@@ -29,7 +29,7 @@ args = vars(ap.parse_args())
 data = [] 
 labels = []
 
-print('paths list :'sorted(list(paths.list_images(args["dataset"]))))
+print('paths list :'+str(sorted(list(paths.list_images(args["dataset"])))))
 
 # loop over the input images 
 for imagePath in sorted(list(paths.list_images(args["dataset"]))):
