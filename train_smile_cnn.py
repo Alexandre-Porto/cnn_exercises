@@ -66,7 +66,7 @@ print('labels shape: '+str(labels.shape))
 (trainX, testX, trainY, testY) = train_test_split(data, labels, test_size=0.20, stratify=labels, random_state=42)
 # initialize the model 
 print("[INFO] compiling model...") 
-model = LeNet.build(width=28, height=28, depth=1, classes=2) 
+model = LeNet.LeNet.build(width=28, height=28, depth=1, classes=2) 
 model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
 # train the network
 print("[INFO] training network...") 
