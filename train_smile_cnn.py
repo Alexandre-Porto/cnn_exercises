@@ -29,9 +29,11 @@ args = vars(ap.parse_args())
 data = [] 
 labels = []
 
+print('paths list :'sorted(list(paths.list_images(args["dataset"]))))
+
 # loop over the input images 
-for imagePath in sorted(list(paths.list_images(args["dataset"]))): 
-    # load the image, pre-process it, and store it in the data list 
+for imagePath in sorted(list(paths.list_images(args["dataset"]))):
+    # load the image, pre-process it, and store it in the data list
     image = cv2.imread(imagePath) 
     image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
     image = imutils.resize(image, width=28) 
@@ -54,7 +56,7 @@ for imagePath in sorted(list(paths.list_images(args["dataset"]))):
     classTotals = labels.sum(axis=0) 
     classWeight = classTotals.max() / classTotals
     
-    #print('data: '+str(data))
+    # print('data: '+str(data))
     
     print('data shape: '+str(data.shape))
     print('labels shape: '+str(labels.shape))
@@ -66,7 +68,7 @@ for imagePath in sorted(list(paths.list_images(args["dataset"]))):
     print("[INFO] compiling model...") 
     model = LeNet.build(width=28, height=28, depth=1, classes=2) 
     model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
-    # train the network 
+    # train the network
     print("[INFO] training network...") 
     H = model.fit(trainX, trainY, validation_data=(testX, testY), 
                   class_weight=classWeight, batch_size=64, epochs=15, verbose=1)
